@@ -4,6 +4,7 @@ export interface ApiConfig {
     key: string;
     apiUrl?: string;
     proxy?: ProxyConfig;
+
 }
 
 export interface ProxyConfig {
