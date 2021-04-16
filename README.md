@@ -91,27 +91,25 @@ from the server, and use "itemAmount" option for getting the number of items as 
 
 ## Usage
 ```javascript
-const FakeApi = require('steamanalyst-api').FakeApi;
+const FakeAPI = require('steamanalyst-api').FakeAPI;
 ```
 or
 ```javascript
-import {FakeApi} from 'steamanalyst-api';
+import {FakeAPI} from 'steamanalyst-api';
 ````
 ## FakeApi options
 
-- `options[itemAmount]`: Amount of responded items from `getItems` method. Max items amount is **120**
 - `options[delay]`: Delay before response from `getItems` method in seconds
 
 #### Example
 ```javascript
-import {FakeApi} from 'steamanalyst-api';
+import {FakeAPI} from 'steamanalyst-api';
 
 const options = {
-    itemAmount: 20,
     delay: 3
 }
 
-const fakeApi = new FakeApi(options);
+const fakeApi = new FakeAPI(options);
 ```
 
 
