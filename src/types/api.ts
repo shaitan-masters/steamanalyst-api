@@ -28,8 +28,3 @@ export interface ItemModel {
 }
 
 export type ResponseData = Array<ItemModel>;
-
-export interface RequestDelimiterOptionsModel {
-    maxRequestAmount: number
-    delay: number
-}

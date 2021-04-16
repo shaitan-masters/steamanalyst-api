@@ -1,4 +1,5 @@
-import Api from './Api';
-import F_API from './FakeApi';
+import Api from './classes/API';
+import FakeApi from './classes/FakeAPI';
+
 export const API = Api;
-export const FakeApi = F_API;
+export const FakeAPI = FakeApi;
