@@ -22,7 +22,7 @@ class FakeAPI extends API {
    * @returns {ResponseData}
    */
   public loadFakeData = (): ResponseData => {
-    const data = fs.readFileSync('./../src/mockup/itemList.json');
+    const data = fs.readFileSync('./src/mockup/itemList.json');
  
     const itemList = JSON.parse(data.toString());
     return itemList;
