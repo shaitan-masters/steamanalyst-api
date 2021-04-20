@@ -11,7 +11,7 @@ import fs from 'fs';
 class FakeAPI extends API {
   public readonly delay: number;
 
-  constructor(opts: ApiConfig) {
+  constructor(opts: ApiConfig = { key: '', delay: 1000 }) {
     super(opts);
 
     this.delay = opts.delay || 1000;
@@ -23,8 +23,7 @@ class FakeAPI extends API {
    * @returns {ResponseData}
    */
   public loadFakeData = (): ResponseData => {
-    console.log(__dirname)
-    const data = fs.readFileSync(path.resolve(__dirname + '/../mockup/itemList.json'));
+    const data = fs.readFileSync(path.resolve(__dirname + '/../../itemList.json'));
  
     const itemList = JSON.parse(data.toString());
     return itemList;

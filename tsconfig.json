@@ -11,6 +11,7 @@
     "noImplicitAny": true,
     "removeComments": false,
     "preserveConstEnums": true,
+    "resolveJsonModule": true,
     "sourceMap": false,
     "rootDir": "src"
   },

@@ -7,15 +7,14 @@ const API_1 = __importDefault(require("./API"));
 const path_1 = __importDefault(require("path"));
 const fs_1 = __importDefault(require("fs"));
 class FakeAPI extends API_1.default {
-    constructor(opts) {
+    constructor(opts = { key: '', delay: 1000 }) {
         super(opts);
         /**
          * Loading fake data from file
          * @returns {ResponseData}
          */
         this.loadFakeData = () => {
-            console.log(__dirname);
-            const data = fs_1.default.readFileSync(path_1.default.resolve(__dirname + '/../mockup/itemList.json'));
+            const data = fs_1.default.readFileSync(path_1.default.resolve(__dirname + '/../../itemList.json'));
             const itemList = JSON.parse(data.toString());
             return itemList;
         };
