@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const API_1 = __importDefault(require("./API"));
+const path_1 = __importDefault(require("path"));
 const fs_1 = __importDefault(require("fs"));
 class FakeAPI extends API_1.default {
     constructor(opts) {
@@ -13,7 +14,7 @@ class FakeAPI extends API_1.default {
          * @returns {ResponseData}
          */
         this.loadFakeData = () => {
-            const data = fs_1.default.readFileSync('./src/mockup/itemList.json');
+            const data = fs_1.default.readFileSync(path_1.default.resolve('../mockup/itemList.json'));
             const itemList = JSON.parse(data.toString());
             return itemList;
         };

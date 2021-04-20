@@ -5,6 +5,7 @@ import {
 
 import API from "./API";
 
+import path from 'path';
 import fs from 'fs';
 
 class FakeAPI extends API {
@@ -22,7 +23,7 @@ class FakeAPI extends API {
    * @returns {ResponseData}
    */
   public loadFakeData = (): ResponseData => {
-    const data = fs.readFileSync('./src/mockup/itemList.json');
+    const data = fs.readFileSync(path.resolve('../mockup/itemList.json'));
  
     const itemList = JSON.parse(data.toString());
     return itemList;
