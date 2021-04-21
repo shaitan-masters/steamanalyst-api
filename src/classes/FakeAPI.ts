@@ -26,7 +26,7 @@ class FakeAPI extends API {
     const data = fs.readFileSync(path.resolve(__dirname + '/../../itemList.json'));
  
     const itemList = JSON.parse(data.toString());
-    return itemList;
+    return itemList.results;
   }
 
   /**

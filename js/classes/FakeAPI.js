@@ -16,7 +16,7 @@ class FakeAPI extends API_1.default {
         this.loadFakeData = () => {
             const data = fs_1.default.readFileSync(path_1.default.resolve(__dirname + '/../../itemList.json'));
             const itemList = JSON.parse(data.toString());
-            return itemList;
+            return itemList.results;
         };
         /**
          * Get items from API
