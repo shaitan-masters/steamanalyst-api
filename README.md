@@ -84,3 +84,36 @@ api.getItems()
 * **ongoing_price_manipulation** - Indicates if we have detected a price manipulation on Steam Market. Returns 0 or 1. If set to 1, "avg_price_7_days" will no longer be returned. "safe_price" should be used in your CS:GO project.
 * **suspicious** - This item has an unusually high price for its wear. Consider assigning a price manually.
 
+# FakeApi
+Use Fake Api as Sandbox for getting items without connecting to the Internet. 
+You can use options such as "delay" for emulated real-time delay of response 
+from the server, and use "itemAmount" option for getting the number of items as you wish.
+
+## Usage
+```javascript
+const FakeAPI = require('steamanalyst-api').FakeAPI;
+```
+or
+```javascript
+import {FakeAPI} from 'steamanalyst-api';
+````
+## FakeApi options
+
+- `options[delay]`: Delay before response from `getItems` method in seconds
+
+#### Example
+```javascript
+import {FakeAPI} from 'steamanalyst-api';
+
+const options = {
+    delay: 3
+}
+
+const fakeApi = new FakeAPI(options);
+```
+
+
+* <b>getItems()</b> - Return Promise with items list
+```javascript
+api.getItems()
+```

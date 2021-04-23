@@ -24,7 +24,7 @@ export interface ItemModel {
     avg7_1yr: number,
     avg30_1yr: number,
     avg60_1yr: number,
-    phases?: {[key: string]: Phase}
+    phases?: {[key: string]: Phase} | 0 | null
 }
 
 export type ResponseData = Array<ItemModel>;
